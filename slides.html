@@ -2,7 +2,7 @@
 <html>
 <head>
 <title></title>
-<!-- 2017-10-19 Thu 20:11 -->
+<!-- 2017-10-20 Fri 00:15 -->
 <meta  charset="utf-8" />
 <meta  htto-equiv="X-UA-Compatible" content="chrome=1" />
 <meta  name="generator" content="Org-mode with org-ioslide" />
@@ -37,8 +37,8 @@
     </slide>
   <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org77a4aad" class="outline-2">
-<h2 id="org77a4aad">Agenda</h2>
+       <h2 class=" "><div id="outline-container-orgb59d4ea" class="outline-2">
+<h2 id="orgb59d4ea">Agenda</h2>
 </div>
 </h2>
        <h3></h3>
@@ -63,8 +63,8 @@
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org9a5aaca" class="outline-2">
-<h2 id="org9a5aaca">Installation and Setup</h2>
+       <h2 class=" "><div id="outline-container-org75e363e" class="outline-2">
+<h2 id="org75e363e">Installation and Setup</h2>
 </div>
 </h2>
        <h3></h3>
@@ -80,7 +80,7 @@ Ensure that you have the following installed:
 </ol>
 
 <p>
-Materials are available here: insert link
+Materials are available <a href="https://github.com/raynoldng/hackerschool-tensorflow">here</a>
 </p>
 
 
@@ -90,8 +90,8 @@ Materials are available here: insert link
 </slide>
 <slide id="sec-" class=" segue dark quote nobackground" style="background-image: url(nil)">
 <aside class="gdbar right bottom"><img src="images/tensorflow.png"></aside><hgroup class="">
-       <h2 class=" "><div id="outline-container-org2f0186f" class="outline-2">
-<h2 id="org2f0186f">Machine Learning Primer</h2>
+       <h2 class=" "><div id="outline-container-org4b0f017" class="outline-2">
+<h2 id="org4b0f017">Machine Learning Primer</h2>
 </div>
 </h2>
        <h3></h3>
@@ -104,8 +104,8 @@ Materials are available here: insert link
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org4db3875" class="outline-3">
-<h3 id="org4db3875">Structure in data</h3>
+       <h2 class=" "><div id="outline-container-orgd216ca0" class="outline-3">
+<h3 id="orgd216ca0">Structure in data</h3>
 </div>
 </h2>
        <h3></h3>
@@ -115,7 +115,7 @@ Materials are available here: insert link
 <li>some interpretations to "structure in data"
 <ul>
 <li>given some data, one can predict other data points with some confidence</li>
-<li>one can compress the data, i.e., store the smae amount of information, with
+<li>one can compress the data, i.e., store the same amount of information, with
 less space</li>
 </ul></li>
 </ul>
@@ -135,8 +135,8 @@ B = \{1, 2, 1, 2, 1, 2, 1\}
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-orgc82d419" class="outline-4">
-<h4 id="orgc82d419">Entropy</h4>
+       <h2 class=" "><div id="outline-container-org02542b6" class="outline-4">
+<h4 id="org02542b6">Entropy</h4>
 </div>
 </h2>
        <h3></h3>
@@ -146,7 +146,7 @@ B = \{1, 2, 1, 2, 1, 2, 1\}
 <li>quantified as Entropy of Process</li>
 </ul>
 <p>
-\[H(X) = -\sum_{i=1}^{N} p(x_i) \log_2 p(x_i)\]
+\[H(X) = -\sum_{i=1}^{N} p(x_i) \log p(x_i)\]
 </p>
 <ul>
 <li>If entropy increases, uncertainty in prediction increases</li>
@@ -159,8 +159,8 @@ B = \{1, 2, 1, 2, 1, 2, 1\}
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-orgee4ac73" class="outline-4">
-<h4 id="orgee4ac73">Entropy (examples)</h4>
+       <h2 class=" "><div id="outline-container-org9b6a36c" class="outline-4">
+<h4 id="org9b6a36c">Entropy (examples)</h4>
 </div>
 </h2>
        <h3></h3>
@@ -170,13 +170,13 @@ B = \{1, 2, 1, 2, 1, 2, 1\}
 <li>Example: fair dice</li>
 </ul>
 <p>
-\[H(\text{fair dice roll}) = -\sum_{i=1}^6 \frac{1}{6} \log_2 \frac{1}{6}=2.58\]
+\[H(\text{fair dice roll}) = -\sum_{i=1}^6 \frac{1}{6} \log \frac{1}{6}=2.58\]
 </p>
 <ul>
 <li>Example: biased 20:80 coin</li>
 </ul>
 <p>
-\[H(20/80 \text{ coin toss}) = -\frac{1}{5}\log_2 \frac{1}{5}-\frac{4}{5}\log_2 \frac{4}{5} = 0.72\]
+\[H(20/80 \text{ coin toss}) = -\frac{1}{5}\log \frac{1}{5}-\frac{4}{5}\log \frac{4}{5} = 0.72\]
 </p>
 <ul>
 <li>biased coin toss has lower entropy; predicting its outcome is easier than a fair dice</li>
@@ -186,53 +186,13 @@ B = \{1, 2, 1, 2, 1, 2, 1\}
 </article>
 
 </slide>
-</slide>
-<slide id="sec-"  >
-<hgroup class="">
-       <h2 class=" "><div id="outline-container-org3101e07" class="outline-4">
-<h4 id="org3101e07">Information in features</h4>
-</div>
-</h2>
-       <h3></h3>
-       </hgroup>
-<article class="" id="text-">
-<ul>
-<li>to make predicts, signals need to be information rich</li>
-<li>[insert image on clusters here]</li>
-</ul>
-
-
-</article>
 
 </slide>
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-orgbdab341" class="outline-4">
-<h4 id="orgbdab341">Dimensionality Reduction</h4>
-</div>
-</h2>
-       <h3></h3>
-       </hgroup>
-<article class="" id="text-">
-<ul>
-<li>signals used to make predictions can contain redundant information</li>
-<li>true dimensionality of a problem is often much smaller than number of
-available features</li>
-<li>common method for dimensionality reduction: PCA</li>
-</ul>
-
-
-</article>
-
-</slide>
-
-</slide>
-</slide>
-<slide id="sec-"  >
-<hgroup class="">
-       <h2 class=" "><div id="outline-container-orgb6afd0c" class="outline-3">
-<h3 id="orgb6afd0c">Basic Concepts for TensorFlow</h3>
+       <h2 class=" "><div id="outline-container-org551d225" class="outline-3">
+<h3 id="org551d225">Basic Concepts for TensorFlow</h3>
 </div>
 </h2>
        <h3></h3>
@@ -268,8 +228,8 @@ predicted outcome
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-orgfb34ea7" class="outline-3">
-<h3 id="orgfb34ea7">Graph Representation of ML Models</h3>
+       <h2 class=" "><div id="outline-container-orgc7b640a" class="outline-3">
+<h3 id="orgc7b640a">Graph Representation of ML Models</h3>
 </div>
 </h2>
        <h3></h3>
@@ -297,8 +257,8 @@ Can represent linear regression as a graph
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-orgbb9b54d" class="outline-3">
-<h3 id="orgbb9b54d">Graph Representation of ML Models (1)</h3>
+       <h2 class=" "><div id="outline-container-org03c1d8a" class="outline-3">
+<h3 id="org03c1d8a">Graph Representation of ML Models (1)</h3>
 </div>
 </h2>
        <h3></h3>
@@ -309,7 +269,7 @@ Consider a slightly larger neural net graph:
 </p>
 
 <div class="figure">
-<p><img src="images/neural_net.png" alt="neural_net.png" width="60%" />
+<p><img src="images/neural_net.png" alt="neural_net.png" width="50%" />
 </p>
 </div>
 
@@ -325,8 +285,8 @@ For more complex models, it could be helpful to visualize your graph.
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org3f7490a" class="outline-3">
-<h3 id="org3f7490a">Activation Functions</h3>
+       <h2 class=" "><div id="outline-container-orgbbb468b" class="outline-3">
+<h3 id="orgbbb468b">Activation Functions</h3>
 </div>
 </h2>
        <h3></h3>
@@ -356,8 +316,8 @@ For more complex models, it could be helpful to visualize your graph.
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org753e671" class="outline-3">
-<h3 id="org753e671">Model Output</h3>
+       <h2 class=" "><div id="outline-container-orgc48987d" class="outline-3">
+<h3 id="orgc48987d">Model Output</h3>
 </div>
 </h2>
        <h3></h3>
@@ -365,13 +325,20 @@ For more complex models, it could be helpful to visualize your graph.
 <article class="" id="text-">
 <ul>
 <li>output depends on activation function used, but is generally any real number \([-\infty, \infty]\)</li>
-<li>For categorical classification, e.g. binary classification, an additional
-sigmoid function can be applied to bring the output to range of \([0,1]\)</li>
+<li>For binary classification, an additional sigmoid function can be applied to
+bring the output to range of \([0,1]\)</li>
 </ul>
 <p>
 \[S(x) = \frac{1}{1+e^{-x}}\]
-[insert image]
 </p>
+
+<article class="flexbox vcenter">
+
+<div class="figure">
+<p><img src="images/sigmoid.png" alt="sigmoid.png" width="90%" />
+</p>
+</div>
+</article>
 
 
 </article>
@@ -380,15 +347,15 @@ sigmoid function can be applied to bring the output to range of \([0,1]\)</li>
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org51d5ecf" class="outline-3">
-<h3 id="org51d5ecf">Softmax Function</h3>
+       <h2 class=" "><div id="outline-container-org3d3d6fb" class="outline-3">
+<h3 id="org3d3d6fb">Softmax Function</h3>
 </div>
 </h2>
        <h3></h3>
        </hgroup>
 <article class="" id="text-">
 <ul>
-<li>for multi-class prediction (e.g. image classification) a softmax function is used:</li>
+<li>for multi-class prediction a softmax function is used:</li>
 </ul>
 <p>
 \[S_j(\boldsymbol{z}) = \frac{e^{z_j}}{\sum_{k=1}^K e^{z_k}} \text{ for }j=1,\dots,k\]
@@ -412,8 +379,8 @@ sigmoid function can be applied to bring the output to range of \([0,1]\)</li>
 </slide>
 <slide id="sec-" class=" segue dark quote nobackground" style="background-image: url(nil)">
 <aside class="gdbar right bottom"><img src="images/tensorflow.png"></aside><hgroup class="">
-       <h2 class=" "><div id="outline-container-orgf4dd01b" class="outline-2">
-<h2 id="orgf4dd01b">Basic TensorFlow Concepts</h2>
+       <h2 class=" "><div id="outline-container-orgc0ed59a" class="outline-2">
+<h2 id="orgc0ed59a">Basic TensorFlow Concepts</h2>
 </div>
 </h2>
        <h3></h3>
@@ -425,8 +392,29 @@ sigmoid function can be applied to bring the output to range of \([0,1]\)</li>
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-orgfeaab9a" class="outline-3">
-<h3 id="orgfeaab9a">Data Flow Graphs</h3>
+       <h2 class=" "><div id="outline-container-orga20573c" class="outline-3">
+<h3 id="orga20573c">What is TensorFlow?</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<ul>
+<li>It is Google's AI Engine</li>
+<li>"TensorFlow is an interface for expressing machine learning algorithms, and an implementation for executing such algorithms"</li>
+<li>Originally developed Google Brain Team to conduct machine learning research and deep neural networks research</li>
+<li>General enough to be applicable to a wide variety of other domains</li>
+</ul>
+
+
+</article>
+
+</slide>
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org1a467f3" class="outline-3">
+<h3 id="org1a467f3">Data Flow Graphs</h3>
 </div>
 </h2>
        <h3></h3>
@@ -448,8 +436,7 @@ Phases:
 
 <pre class="prettyprint" data-lang="python">
 import tensorflow as tf
-a = tf.add(3,5)
-</pre>
+a = tf.add(3,5)</pre>
 
 </div>
 
@@ -461,22 +448,21 @@ a = tf.add(3,5)
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org6ed032e" class="outline-3">
-<h3 id="org6ed032e">Visualizing with TensorBoard</h3>
+       <h2 class=" "><div id="outline-container-orgb280e0f" class="outline-3">
+<h3 id="orgb280e0f">Visualizing with TensorBoard</h3>
 </div>
 </h2>
        <h3></h3>
        </hgroup>
 <article class="" id="text-">
 <ul>
-<li>`tf.summary.FileWriter` serializes the graph into a format the TensorBoard can read</li>
+<li><code>tf.summary.FileWriter</code> serializes the graph into a format the TensorBoard can read</li>
 </ul>
 
 <div class="org-src-container">
 
 <pre class="prettyprint" data-lang="python">
-tf.summary.FileWriter("logs", tf.get_default_graph()).close()
-</pre>
+tf.summary.FileWriter("logs", tf.get_default_graph()).close()</pre>
 
 </div>
 
@@ -487,8 +473,7 @@ tf.summary.FileWriter("logs", tf.get_default_graph()).close()
 <div class="org-src-container">
 
 <pre class="prettyprint" data-lang="sh">
-tensorboard --logdir=logs
-</pre>
+tensorboard --logdir=logs</pre>
 
 </div>
 
@@ -504,8 +489,8 @@ tensorboard --logdir=logs
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org79761c1" class="outline-3">
-<h3 id="org79761c1">How to get value of `a`?</h3>
+       <h2 class=" "><div id="outline-container-orgd9e6828" class="outline-3">
+<h3 id="orgd9e6828">How to get value of <code>a</code>?</h3>
 </div>
 </h2>
        <h3></h3>
@@ -514,13 +499,12 @@ tensorboard --logdir=logs
 <div class="org-src-container">
 
 <pre class="prettyprint" data-lang="python">
-print(a)
-</pre>
+print(a)</pre>
 
 </div>
 
 <p>
-Create a `session`, and within it, evaluate the graph
+Create a <code>session</code>, and within it, evaluate the graph
 </p>
 
 <div class="org-src-container">
@@ -528,8 +512,7 @@ Create a `session`, and within it, evaluate the graph
 <pre class="prettyprint" data-lang="python">
 sess = tf.Session()
 print(sess.run(a))
-sess.close()
-</pre>
+sess.close()</pre>
 
 </div>
 
@@ -541,8 +524,7 @@ Alternatively:
 
 <pre class="prettyprint" data-lang="python">
 with tf.Session() as sess:
-    print(sess.run(a))
-</pre>
+    print(sess.run(a))</pre>
 
 </div>
 
@@ -554,8 +536,8 @@ with tf.Session() as sess:
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org6d79774" class="outline-3">
-<h3 id="org6d79774">Practice with More Graphs</h3>
+       <h2 class=" "><div id="outline-container-org1a127a4" class="outline-3">
+<h3 id="org1a127a4">Practice with More Graphs</h3>
 </div>
 </h2>
        <h3></h3>
@@ -585,8 +567,8 @@ Useful functions: <code>tf.add</code>, <code>tf.multiply</code>, <code>tf.pow</c
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org1f6cb67" class="outline-3">
-<h3 id="org1f6cb67">Solution</h3>
+       <h2 class=" "><div id="outline-container-orgc2aaaff" class="outline-3">
+<h3 id="orgc2aaaff">Solution</h3>
 </div>
 </h2>
        <h3></h3>
@@ -601,8 +583,7 @@ op1 = tf.add(x, y)
 op2 = tf.multiply(x, y)
 op3 = tf.pow(op1, op2)
 with tf.Session() as sess:
-    op3 = sess.run(op3)
-</pre>
+    op3 = sess.run(op3)</pre>
 
 </div>
 
@@ -614,8 +595,8 @@ with tf.Session() as sess:
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-orgc3f3c6d" class="outline-3">
-<h3 id="orgc3f3c6d">TensorFlow Variables</h3>
+       <h2 class=" "><div id="outline-container-orge3d1f05" class="outline-3">
+<h3 id="orge3d1f05">TensorFlow Variables</h3>
 </div>
 </h2>
        <h3></h3>
@@ -636,8 +617,7 @@ W2 = tf.Variable(tf.zeros((2,2)), name="weights")
 with tf.Session() as sess:
     print(sess.run(W1))
     sess.run(tf.global_variables_initializer())
-    print(sess.run(W2))
-</pre>
+    print(sess.run(W2))</pre>
 
 </div>
 
@@ -649,8 +629,8 @@ with tf.Session() as sess:
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org3de40e6" class="outline-3">
-<h3 id="org3de40e6">Updating Variable State</h3>
+       <h2 class=" "><div id="outline-container-orged50343" class="outline-3">
+<h3 id="orged50343">Updating Variable State</h3>
 </div>
 </h2>
        <h3></h3>
@@ -672,8 +652,7 @@ with tf.Session() as sess:
     print(sess.run(state))
     for _ in range(3):
         sess.run(update)
-        print(sess.run(state))
-</pre>
+        print(sess.run(state))</pre>
 
 </div>
 
@@ -685,8 +664,8 @@ with tf.Session() as sess:
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-orge860938" class="outline-3">
-<h3 id="orge860938">Fetching Variable State</h3>
+       <h2 class=" "><div id="outline-container-org8f36c0e" class="outline-3">
+<h3 id="org8f36c0e">Fetching Variable State</h3>
 </div>
 </h2>
        <h3></h3>
@@ -703,8 +682,7 @@ mul = tf.multiply(input1, intermed)
 
 with tf.Session() as sess:
     result = sess.run([mul, intermed])
-    print(result)
-</pre>
+    print(result)</pre>
 
 </div>
 
@@ -716,8 +694,8 @@ with tf.Session() as sess:
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org446d249" class="outline-3">
-<h3 id="org446d249">TensorFlow Placeholders</h3>
+       <h2 class=" "><div id="outline-container-orgce0b4c6" class="outline-3">
+<h3 id="orgce0b4c6">TensorFlow Placeholders</h3>
 </div>
 </h2>
        <h3></h3>
@@ -737,8 +715,7 @@ input2 = tf.placeholder(tf.float32)
 output = tf.multiply(input1, input2)
 
 with tf.Session() as sess:
-    print(sess.run([output], feed_dict={input1:[7.], input2:[2.]}))
-</pre>
+    print(sess.run([output], feed_dict={input1:[7.], input2:[2.]}))</pre>
 
 </div>
 
@@ -750,8 +727,8 @@ with tf.Session() as sess:
 </slide>
 <slide id="sec-" class=" segue dark quote nobackground" style="background-image: url(nil)">
 <aside class="gdbar right bottom"><img src="images/tensorflow.png"></aside><hgroup class="">
-       <h2 class=" "><div id="outline-container-org8318ce4" class="outline-3">
-<h3 id="org8318ce4">Example: Linear Regression</h3>
+       <h2 class=" "><div id="outline-container-org7de40bf" class="outline-3">
+<h3 id="org7de40bf">Example: Linear Regression</h3>
 </div>
 </h2>
        <h3></h3>
@@ -763,8 +740,8 @@ with tf.Session() as sess:
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-orgde42caf" class="outline-4">
-<h4 id="orgde42caf">Recap</h4>
+       <h2 class=" "><div id="outline-container-org6ea7b1f" class="outline-4">
+<h4 id="org6ea7b1f">Recap</h4>
 </div>
 </h2>
        <h3></h3>
@@ -794,8 +771,8 @@ Supose we want to model the following "unknown" function:
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org3afd7a3" class="outline-4">
-<h4 id="org3afd7a3">Plot Input Data</h4>
+       <h2 class=" "><div id="outline-container-org6f5e442" class="outline-4">
+<h4 id="org6f5e442">Plot Input Data</h4>
 </div>
 </h2>
        <h3></h3>
@@ -817,8 +794,7 @@ import matplotlib.pyplot as plt
 X_data = np.arange(100, step=.1)
 y_data = X_data + 20 * np.sin(X_data/10)
 # Plot input data
-plt.scatter(X_data, y_data)
-</pre>
+plt.scatter(X_data, y_data)</pre>
 
 </div>
 
@@ -829,8 +805,8 @@ plt.scatter(X_data, y_data)
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-orgd81ad03" class="outline-4">
-<h4 id="orgd81ad03">Scatter Plot</h4>
+       <h2 class=" "><div id="outline-container-orgdee9295" class="outline-4">
+<h4 id="orgdee9295">Scatter Plot</h4>
 </div>
 </h2>
        <h3></h3>
@@ -851,8 +827,8 @@ plt.scatter(X_data, y_data)
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org6a77845" class="outline-4">
-<h4 id="org6a77845">Define Variables and Placeholders</h4>
+       <h2 class=" "><div id="outline-container-org94572d0" class="outline-4">
+<h4 id="org94572d0">Define Variables and Placeholders</h4>
 </div>
 </h2>
        <h3></h3>
@@ -871,8 +847,7 @@ y_data = np.reshape(y_data, (n_samples, 1))
 
 # Define placeholders for input
 X = tf.placeholder(tf.float32, shape=(batch_size, 1))
-y = tf.placeholder(tf.float32, shape=(batch_size, 1))
-</pre>
+y = tf.placeholder(tf.float32, shape=(batch_size, 1))</pre>
 
 </div>
 
@@ -883,8 +858,8 @@ y = tf.placeholder(tf.float32, shape=(batch_size, 1))
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-orgeb1a735" class="outline-4">
-<h4 id="orgeb1a735">Loss Function</h4>
+       <h2 class=" "><div id="outline-container-org515dbbf" class="outline-4">
+<h4 id="org515dbbf">Loss Function</h4>
 </div>
 </h2>
        <h3></h3>
@@ -905,8 +880,7 @@ with tf.variable_scope("linear-regression"):
     b = tf.get_variable("bias", (1,),
                         initializer = tf.constant_initializer(0.0))
     y_pred = tf.matmul(X, W) + b
-    loss = tf.reduce_sum((y - y_pred)**2/n_samples)
-</pre>
+    loss = tf.reduce_sum((y - y_pred)**2/n_samples)</pre>
 
 </div>
 
@@ -917,8 +891,8 @@ with tf.variable_scope("linear-regression"):
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org9c7d4b7" class="outline-4">
-<h4 id="org9c7d4b7">Define Optimizer and Train Model</h4>
+       <h2 class=" "><div id="outline-container-org1d9c553" class="outline-4">
+<h4 id="org1d9c553">Define Optimizer and Train Model</h4>
 </div>
 </h2>
        <h3></h3>
@@ -954,8 +928,8 @@ with tf.Session() as sess:
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-orge7c40c6" class="outline-4">
-<h4 id="orge7c40c6">Results</h4>
+       <h2 class=" "><div id="outline-container-org7ea38b3" class="outline-4">
+<h4 id="org7ea38b3">Results</h4>
 </div>
 </h2>
        <h3></h3>
@@ -981,8 +955,8 @@ with tf.Session() as sess:
 </slide>
 <slide id="sec-" class=" segue dark quote nobackground" style="background-image: url(nil)">
 <aside class="gdbar right bottom"><img src="images/tensorflow.png"></aside><hgroup class="">
-       <h2 class=" "><div id="outline-container-orgced5467" class="outline-2">
-<h2 id="orgced5467">MNIST and TensorFlow</h2>
+       <h2 class=" "><div id="outline-container-org73258e7" class="outline-2">
+<h2 id="org73258e7">MNIST and TensorFlow</h2>
 </div>
 </h2>
        <h3></h3>
@@ -994,8 +968,8 @@ with tf.Session() as sess:
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org731c0b4" class="outline-3">
-<h3 id="org731c0b4">Introduction</h3>
+       <h2 class=" "><div id="outline-container-org2e6db38" class="outline-3">
+<h3 id="org2e6db38">Introduction</h3>
 </div>
 </h2>
        <h3></h3>
@@ -1020,8 +994,8 @@ with tf.Session() as sess:
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org348c220" class="outline-4">
-<h4 id="org348c220">Importing MNIST Data</h4>
+       <h2 class=" "><div id="outline-container-org4e17049" class="outline-4">
+<h4 id="org4e17049">Importing MNIST Data</h4>
 </div>
 </h2>
        <h3></h3>
@@ -1035,8 +1009,7 @@ To download and read in the data automatically:
 
 <pre class="prettyprint" data-lang="python">
 from tensorflow.examples.tutorials.mnist import input_data
-mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
-</pre>
+mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)</pre>
 
 </div>
 
@@ -1055,8 +1028,8 @@ One hot encoding
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-orge48ce94" class="outline-4">
-<h4 id="orge48ce94">MNIST Data</h4>
+       <h2 class=" "><div id="outline-container-org4004bd7" class="outline-4">
+<h4 id="org4004bd7">MNIST Data</h4>
 </div>
 </h2>
        <h3></h3>
@@ -1066,9 +1039,9 @@ One hot encoding
 The MNIST data is split into three parts:
 </p>
 <ol>
-<li>55,000 data points of training data (`mnist.train`)</li>
-<li>10,000 data points of test data (`mnist.test`)</li>
-<li>5,000 data points of validation data (`mnist.validation`)</li>
+<li>55,000 data points of training data (<code>mnist.train</code>)</li>
+<li>10,000 data points of test data (<code>mnist.test</code>)</li>
+<li>5,000 data points of validation data (<code>mnist.validation</code>)</li>
 </ol>
 
 <p>
@@ -1088,8 +1061,8 @@ Every MNIST data has 2 parts:
 </slide>
 <slide id="sec-" class=" segue dark quote nobackground" style="background-image: url(nil)">
 <aside class="gdbar right bottom"><img src="images/tensorflow.png"></aside><hgroup class="">
-       <h2 class=" "><div id="outline-container-org56fcbfc" class="outline-3">
-<h3 id="org56fcbfc">Softmax Regression</h3>
+       <h2 class=" "><div id="outline-container-org540e775" class="outline-3">
+<h3 id="org540e775">Softmax Regression</h3>
 </div>
 </h2>
        <h3></h3>
@@ -1101,20 +1074,18 @@ Every MNIST data has 2 parts:
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org9445868" class="outline-4">
-<h4 id="org9445868">Overview</h4>
+       <h2 class=" "><div id="outline-container-orgd19801a" class="outline-4">
+<h4 id="orgd19801a">Overview</h4>
 </div>
 </h2>
        <h3></h3>
        </hgroup>
 <article class="" id="text-">
-<article class="flexbox vcenter">
 
 <div class="figure">
-<p><img src="images/softmax_1.png" alt="softmax_1.png" width="140%" />
+<p><img src="images/softmax_1.png" alt="softmax_1.png" width="80%" />
 </p>
 </div>
-</article>
 
 
 </article>
@@ -1123,8 +1094,8 @@ Every MNIST data has 2 parts:
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org948049f" class="outline-4">
-<h4 id="org948049f">Overview (1)</h4>
+       <h2 class=" "><div id="outline-container-orgdad256b" class="outline-4">
+<h4 id="orgdad256b">Overview (1)</h4>
 </div>
 </h2>
        <h3></h3>
@@ -1153,8 +1124,8 @@ Every MNIST data has 2 parts:
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org7a189d8" class="outline-4">
-<h4 id="org7a189d8">Defining Our Model</h4>
+       <h2 class=" "><div id="outline-container-orgaa90068" class="outline-4">
+<h4 id="orgaa90068">Defining Our Model</h4>
 </div>
 </h2>
        <h3></h3>
@@ -1170,8 +1141,7 @@ x = tf.placeholder(tf.float32, [None, 784])
 W = tf.Variable(tf.zeros([784, 10]))
 b = tf.Variable(tf.zeros([10]))
 
-y = tf.nn.softmax(tf.matmul(x, W) + b)
-</pre>
+y = tf.nn.softmax(tf.matmul(x, W) + b)</pre>
 
 </div>
 <ul>
@@ -1186,8 +1156,8 @@ y = tf.nn.softmax(tf.matmul(x, W) + b)
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org08c27ad" class="outline-4">
-<h4 id="org08c27ad">Training</h4>
+       <h2 class=" "><div id="outline-container-org63edc50" class="outline-4">
+<h4 id="org63edc50">Training</h4>
 </div>
 </h2>
        <h3></h3>
@@ -1213,8 +1183,8 @@ Where:
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org1f3d353" class="outline-4">
-<h4 id="org1f3d353">Training (1)</h4>
+       <h2 class=" "><div id="outline-container-org5221163" class="outline-4">
+<h4 id="org5221163">Training (1)</h4>
 </div>
 </h2>
        <h3></h3>
@@ -1229,8 +1199,7 @@ Need a placeholder to implement cross entropy:
 <pre class="prettyprint" data-lang="python">
 y_ = tf.placeholder(tf.float32, [None, 10])
 cross_entropy = tf.reduce_mean(-tf.reduce_sum(y_ * tf.log(y), 
-                                              reduction_indices = [1]))
-</pre>
+                                              reduction_indices = [1]))</pre>
 
 </div>
 
@@ -1245,8 +1214,7 @@ cross_entropy = tf.reduce_mean(-tf.reduce_sum(y_ * tf.log(y),
 #         [1, 1, 1]]
 tf.reduce_sum(x) ==&gt; 6
 tf.reduce_sum(x, 0) ==&gt; [2, 2, 2]
-tf.reduce_sum(x, 1) ==&gt; [3, 3]
-</pre>
+tf.reduce_sum(x, 1) ==&gt; [3, 3]</pre>
 
 </div>
 
@@ -1257,8 +1225,8 @@ tf.reduce_sum(x, 1) ==&gt; [3, 3]
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-orgbefcb8e" class="outline-4">
-<h4 id="orgbefcb8e">Training (2)</h4>
+       <h2 class=" "><div id="outline-container-org0375f38" class="outline-4">
+<h4 id="org0375f38">Training (2)</h4>
 </div>
 </h2>
        <h3></h3>
@@ -1273,8 +1241,7 @@ sess = tf.Session()
 sess.run(tf.global_variables_initializer())
 for _ in range(400):
     batch_xs, batch_ys = mnist.train.next_batch(100)
-    sess.run(train_step, feed_dict={x: batch_xs, y_: batch_ys})
-</pre>
+    sess.run(train_step, feed_dict={x: batch_xs, y_: batch_ys})</pre>
 
 </div>
 
@@ -1290,8 +1257,8 @@ feasible than training on the entire data set
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org93727eb" class="outline-4">
-<h4 id="org93727eb">Evaluating Our Model</h4>
+       <h2 class=" "><div id="outline-container-orge3534a8" class="outline-4">
+<h4 id="orge3534a8">Evaluating Our Model</h4>
 </div>
 </h2>
        <h3></h3>
@@ -1299,7 +1266,7 @@ feasible than training on the entire data set
 <article class="" id="text-">
 <ul>
 <li><code>tf.argmax</code> is an extrememly helpful function that returns the index of the highest entry in a tensor along some axis.</li>
-<li><code>tf.argmax(y,1)</code> is predicted label while `tf.argmax(y_, 1)` is the actual label</li>
+<li><code>tf.argmax(y,1)</code> is predicted label while <code>tf.argmax(y_, 1)</code> is the actual label</li>
 <li><code>tf.equal</code> to check if prediction matches the true</li>
 </ul>
 
@@ -1308,8 +1275,7 @@ feasible than training on the entire data set
 <pre class="prettyprint" data-lang="python">
 correct_prediction = tf.equal(tf.argmax(y,1), tf.argmax(y_,1))
 accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
-print(sess.run(accuracy, feed_dict={x: mnist.test.images, y_: mnist.test.labels}))
-</pre>
+print(sess.run(accuracy, feed_dict={x: mnist.test.images, y_: mnist.test.labels}))</pre>
 
 </div>
 
@@ -1326,8 +1292,8 @@ Approx 91% is very bad, 6 digit ZIP code would have an accuracy rate of 57%
 </slide>
 <slide id="sec-" class=" segue dark quote nobackground" style="background-image: url(nil)">
 <aside class="gdbar right bottom"><img src="images/tensorflow.png"></aside><hgroup class="">
-       <h2 class=" "><div id="outline-container-orge857231" class="outline-3">
-<h3 id="orge857231">Convolutional Neural Network</h3>
+       <h2 class=" "><div id="outline-container-org86d0a2f" class="outline-3">
+<h3 id="org86d0a2f">Convolutional Neural Network</h3>
 </div>
 </h2>
        <h3></h3>
@@ -1339,8 +1305,8 @@ Approx 91% is very bad, 6 digit ZIP code would have an accuracy rate of 57%
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org12ef98d" class="outline-4">
-<h4 id="org12ef98d">Introduction</h4>
+       <h2 class=" "><div id="outline-container-org67466a7" class="outline-4">
+<h4 id="org67466a7">Introduction</h4>
 </div>
 </h2>
        <h3></h3>
@@ -1361,8 +1327,8 @@ networks with the same number of variables</li>
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org0f1af9e" class="outline-4">
-<h4 id="org0f1af9e">Flowchart</h4>
+       <h2 class=" "><div id="outline-container-org6e6ba8e" class="outline-4">
+<h4 id="org6e6ba8e">Flowchart</h4>
 </div>
 </h2>
        <h3></h3>
@@ -1383,8 +1349,8 @@ networks with the same number of variables</li>
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org2d00314" class="outline-4">
-<h4 id="org2d00314">Features</h4>
+       <h2 class=" "><div id="outline-container-orgc9b09a3" class="outline-4">
+<h4 id="orgc9b09a3">Features</h4>
 </div>
 </h2>
        <h3></h3>
@@ -1405,8 +1371,8 @@ networks with the same number of variables</li>
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org8333b77" class="outline-4">
-<h4 id="org8333b77">Features (1)</h4>
+       <h2 class=" "><div id="outline-container-org22099cf" class="outline-4">
+<h4 id="org22099cf">Features (1)</h4>
 </div>
 </h2>
        <h3></h3>
@@ -1427,8 +1393,8 @@ networks with the same number of variables</li>
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org0278494" class="outline-4">
-<h4 id="org0278494">Convolution</h4>
+       <h2 class=" "><div id="outline-container-org4f87e24" class="outline-4">
+<h4 id="org4f87e24">Convolution</h4>
 </div>
 </h2>
        <h3></h3>
@@ -1437,7 +1403,7 @@ networks with the same number of variables</li>
 <article class="flexbox vcenter">
 
 <div class="figure">
-<p><img src="images/convolution.png" alt="convolution.png" width="100%" />
+<p><img src="images/convolution.png" alt="convolution.png" width="80%" />
 </p>
 </div>
 </article>
@@ -1449,8 +1415,8 @@ networks with the same number of variables</li>
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org8ece018" class="outline-4">
-<h4 id="org8ece018">Convolution (1)</h4>
+       <h2 class=" "><div id="outline-container-orgd3cbf50" class="outline-4">
+<h4 id="orgd3cbf50">Convolution (1)</h4>
 </div>
 </h2>
        <h3></h3>
@@ -1471,8 +1437,8 @@ networks with the same number of variables</li>
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org4702bdd" class="outline-4">
-<h4 id="org4702bdd">Convolution (2)</h4>
+       <h2 class=" "><div id="outline-container-org106904b" class="outline-4">
+<h4 id="org106904b">Convolution (2)</h4>
 </div>
 </h2>
        <h3></h3>
@@ -1481,7 +1447,7 @@ networks with the same number of variables</li>
 <article class="flexbox vcenter">
 
 <div class="figure">
-<p><img src="images/convolution_3.png" alt="convolution_3.png" width="100%" />
+<p><img src="images/convolution_3.png" alt="convolution_3.png" width="95%" />
 </p>
 </div>
 </article>
@@ -1493,8 +1459,8 @@ networks with the same number of variables</li>
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-orgbe803d4" class="outline-4">
-<h4 id="orgbe803d4">Pooling</h4>
+       <h2 class=" "><div id="outline-container-orge36f6c4" class="outline-4">
+<h4 id="orge36f6c4">Pooling</h4>
 </div>
 </h2>
        <h3></h3>
@@ -1515,8 +1481,8 @@ networks with the same number of variables</li>
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org6e491bb" class="outline-4">
-<h4 id="org6e491bb">Pooling (1)</h4>
+       <h2 class=" "><div id="outline-container-org5e40b83" class="outline-4">
+<h4 id="org5e40b83">Pooling (1)</h4>
 </div>
 </h2>
        <h3></h3>
@@ -1537,8 +1503,8 @@ networks with the same number of variables</li>
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org720d879" class="outline-4">
-<h4 id="org720d879">Fully Connected Layers (edit image)</h4>
+       <h2 class=" "><div id="outline-container-org5a05c8b" class="outline-4">
+<h4 id="org5a05c8b">Fully Connected Layers</h4>
 </div>
 </h2>
        <h3></h3>
@@ -1547,7 +1513,7 @@ networks with the same number of variables</li>
 <article class="flexbox vcenter">
 
 <div class="figure">
-<p><img src="images/layers.png" alt="layers.png" width="90%" />
+<p><img src="images/layers.png" alt="layers.png" width="100%" />
 </p>
 </div>
 </article>
@@ -1559,8 +1525,8 @@ networks with the same number of variables</li>
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-orga0d2656" class="outline-4">
-<h4 id="orga0d2656">Hyper Parameters</h4>
+       <h2 class=" "><div id="outline-container-org3a55ccb" class="outline-4">
+<h4 id="org3a55ccb">Hyper Parameters</h4>
 </div>
 </h2>
        <h3></h3>
@@ -1590,8 +1556,8 @@ networks with the same number of variables</li>
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org6e58891" class="outline-4">
-<h4 id="org6e58891">Weight Initialization</h4>
+       <h2 class=" "><div id="outline-container-org7a44ec1" class="outline-4">
+<h4 id="org7a44ec1">Weight Initialization</h4>
 </div>
 </h2>
        <h3></h3>
@@ -1610,8 +1576,7 @@ def weight_variable(shape):
 
 def bias_variable(shape):
   initial = tf.constant(0.1, shape=shape)
-  return tf.Variable(initial)
-</pre>
+  return tf.Variable(initial)</pre>
 
 </div>
 
@@ -1622,8 +1587,8 @@ def bias_variable(shape):
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org14ca474" class="outline-4">
-<h4 id="org14ca474">Convolution and Pooling</h4>
+       <h2 class=" "><div id="outline-container-org687b3ac" class="outline-4">
+<h4 id="org687b3ac">Convolution and Pooling</h4>
 </div>
 </h2>
        <h3></h3>
@@ -1637,8 +1602,7 @@ def conv2d(x, W):
 
 def max_pool_2x2(x):
   return tf.nn.max_pool(x, ksize=[1, 2, 2, 1],
-                        strides=[1, 2, 2, 1], padding='SAME')
-</pre>
+                        strides=[1, 2, 2, 1], padding='SAME')</pre>
 
 </div>
 
@@ -1649,8 +1613,8 @@ def max_pool_2x2(x):
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org54ab9b7" class="outline-4">
-<h4 id="org54ab9b7">First Convolutional Layer</h4>
+       <h2 class=" "><div id="outline-container-org40fca8f" class="outline-4">
+<h4 id="org40fca8f">First Convolutional Layer</h4>
 </div>
 </h2>
        <h3></h3>
@@ -1669,8 +1633,7 @@ W_conv1 = weight_variable([5, 5, 1, 32])
 b_conv1 = bias_variable([32])
 x_image = tf.reshape(x, [-1, 28, 28, 1]) # ?, width, height, number of color channels
 h_conv1 = tf.nn.relu(conv2d(x_image, W_conv1) + b_conv1)
-h_pool1 = max_pool_2x2(h_conv1) # reduce image to 14x14
-</pre>
+h_pool1 = max_pool_2x2(h_conv1) # reduce image to 14x14</pre>
 
 </div>
 
@@ -1681,8 +1644,8 @@ h_pool1 = max_pool_2x2(h_conv1) # reduce image to 14x14
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org526afae" class="outline-4">
-<h4 id="org526afae">Second Convolutional Layer</h4>
+       <h2 class=" "><div id="outline-container-orgf71aa63" class="outline-4">
+<h4 id="orgf71aa63">Second Convolutional Layer</h4>
 </div>
 </h2>
        <h3></h3>
@@ -1700,8 +1663,7 @@ W_conv2 = weight_variable([5, 5, 32, 64])
 b_conv2 = bias_variable([64])
 
 h_conv2 = tf.nn.relu(conv2d(h_pool1, W_conv2) + b_conv2)
-h_pool2 = max_pool_2x2(h_conv2)
-</pre>
+h_pool2 = max_pool_2x2(h_conv2)</pre>
 
 </div>
 
@@ -1712,8 +1674,8 @@ h_pool2 = max_pool_2x2(h_conv2)
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-orgb29d6af" class="outline-4">
-<h4 id="orgb29d6af">Densely Connected Layer</h4>
+       <h2 class=" "><div id="outline-container-orgfa835c3" class="outline-4">
+<h4 id="orgfa835c3">Densely Connected Layer</h4>
 </div>
 </h2>
        <h3></h3>
@@ -1731,8 +1693,7 @@ W_fc1 = weight_variable([7 * 7 * 64, 1024])
 b_fc1 = bias_variable([1024])
 
 h_pool2_flat = tf.reshape(h_pool2, [-1, 7*7*64])
-h_fc1 = tf.nn.relu(tf.matmul(h_pool2_flat, W_fc1) + b_fc1)
-</pre>
+h_fc1 = tf.nn.relu(tf.matmul(h_pool2_flat, W_fc1) + b_fc1)</pre>
 
 </div>
 
@@ -1743,8 +1704,8 @@ h_fc1 = tf.nn.relu(tf.matmul(h_pool2_flat, W_fc1) + b_fc1)
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org743b307" class="outline-4">
-<h4 id="org743b307">Read Out Layer</h4>
+       <h2 class=" "><div id="outline-container-org74c5e3e" class="outline-4">
+<h4 id="org74c5e3e">Read Out Layer</h4>
 </div>
 </h2>
        <h3></h3>
@@ -1760,8 +1721,7 @@ Add one last layer, similar to softmax regression
 W_fc2 = weight_variable([1024, 10])
 b_fc2 = bias_variable([10])
 
-y_conv = tf.matmul(h_fc1, W_fc2) + b_fc2
-</pre>
+y_conv = tf.matmul(h_fc1, W_fc2) + b_fc2</pre>
 
 </div>
 
@@ -1772,8 +1732,8 @@ y_conv = tf.matmul(h_fc1, W_fc2) + b_fc2
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org9153ac9" class="outline-4">
-<h4 id="org9153ac9">Train and Evaluate the Model</h4>
+       <h2 class=" "><div id="outline-container-orga702579" class="outline-4">
+<h4 id="orga702579">Train and Evaluate the Model</h4>
 </div>
 </h2>
        <h3></h3>
@@ -1786,8 +1746,7 @@ cross_entropy = tf.reduce_mean(
     tf.nn.softmax_cross_entropy_with_logits(labels=y_, logits=y_conv))
 train_step = tf.train.AdamOptimizer(1e-4).minimize(cross_entropy)
 correct_prediction = tf.equal(tf.argmax(y_conv, 1), tf.argmax(y_, 1))
-accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
-</pre>
+accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))</pre>
 
 </div>
 
@@ -1799,8 +1758,8 @@ accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-orga38f7da" class="outline-4">
-<h4 id="orga38f7da">Train and Evaluate the Model (1)</h4>
+       <h2 class=" "><div id="outline-container-org41dc16c" class="outline-4">
+<h4 id="org41dc16c">Train and Evaluate the Model (1)</h4>
 </div>
 </h2>
        <h3></h3>
@@ -1821,8 +1780,7 @@ with sess.as_default():
         train_step.run(feed_dict={x: batch[0], y_: batch[1]})
 
     print('test accuracy %g' % accuracy.eval(feed_dict={
-      x: mnist.test.images, y_: mnist.test.labels}))
-</pre>
+      x: mnist.test.images, y_: mnist.test.labels}))</pre>
 
 </div>
 
@@ -1836,8 +1794,8 @@ with sess.as_default():
 </slide>
 <slide id="sec-" class=" segue dark quote nobackground" style="background-image: url(nil)">
 <aside class="gdbar right bottom"><img src="images/tensorflow.png"></aside><hgroup class="">
-       <h2 class=" "><div id="outline-container-orgfd20946" class="outline-3">
-<h3 id="orgfd20946">Saving and Restoring your model</h3>
+       <h2 class=" "><div id="outline-container-org19e4ccc" class="outline-3">
+<h3 id="org19e4ccc">Saving and Restoring your model</h3>
 </div>
 </h2>
        <h3></h3>
@@ -1850,8 +1808,8 @@ with sess.as_default():
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org3ea5508" class="outline-4">
-<h4 id="org3ea5508">Exporting the Model</h4>
+       <h2 class=" "><div id="outline-container-orgb904a4e" class="outline-4">
+<h4 id="orgb904a4e">Exporting the Model</h4>
 </div>
 </h2>
        <h3></h3>
@@ -1866,8 +1824,7 @@ with sess.as_default():
 <pre class="prettyprint" data-lang="python">
 model_path = "./tmp/model.ckpt"
 save_path = saver.save(sess, model_path) # saver is not declared???
-print("Model saved in file: %s" % save_path)
-</pre>
+print("Model saved in file: %s" % save_path)</pre>
 
 </div>
 
@@ -1879,8 +1836,8 @@ print("Model saved in file: %s" % save_path)
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org7aacc08" class="outline-4">
-<h4 id="org7aacc08">Restoring the Session</h4>
+       <h2 class=" "><div id="outline-container-org88c60c1" class="outline-4">
+<h4 id="org88c60c1">Restoring the Session</h4>
 </div>
 </h2>
        <h3></h3>
@@ -1894,8 +1851,7 @@ model_path = "./tmp/model.ckpt"
 with tf.Session() as sess:
   sess.run(tf.global_variables_initializer())
   saver.restore(sess, model_path)
-  print("Accuracy:", accuracy.eval({x: mnist.test.images, y_: mnist.test.labels}))
-</pre>
+  print("Accuracy:", accuracy.eval({x: mnist.test.images, y_: mnist.test.labels}))</pre>
 
 </div>
 
@@ -1908,16 +1864,20 @@ with tf.Session() as sess:
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-orga1ee78d" class="outline-3">
-<h3 id="orga1ee78d">Toy Program</h3>
+       <h2 class=" "><div id="outline-container-org4b7ea9a" class="outline-3">
+<h3 id="org4b7ea9a">Toy Program</h3>
 </div>
 </h2>
        <h3></h3>
        </hgroup>
 <article class="" id="text-">
-<p>
-[insert link to github repo here]
+<article class="flexbox vcenter">
+
+<div class="figure">
+<p><img src="images/toy_program.png" alt="toy_program.png" width="80%" />
 </p>
+</div>
+</article>
 
 
 </article>
@@ -1925,12 +1885,11 @@ with tf.Session() as sess:
 </slide>
 
 </slide>
-
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-orgcb9cbf5" class="outline-2">
-<h2 id="orgcb9cbf5">References</h2>
+       <h2 class=" "><div id="outline-container-org0b6c408" class="outline-2">
+<h2 id="org0b6c408">References</h2>
 </div>
 </h2>
        <h3></h3>
@@ -1938,6 +1897,10 @@ with tf.Session() as sess:
 <article class="" id="text-">
 <ul>
 <li><a href="https://github.com/PythonWorkshop/intro-to-tensorflow/blob/master/MathPrimer/Math%20primer%20for%20ML%20&amp;%20TensorFlow%20workshop.ipynb">Machine Learning Primer</a></li>
+<li><a href="http://brohrer.github.io/how_convolutional_neural_networks_work.html">http://brohrer.github.io/how_convolutional_neural_networks_work.html</a></li>
+<li><a href="https://www.tensorflow.org/get_started/mnist/beginners">https://www.tensorflow.org/get_started/mnist/beginners</a></li>
+<li><a href="https://www.tensorflow.org/get_started/mnist/pros">https://www.tensorflow.org/get_started/mnist/pros</a></li>
+<li><a href="https://github.com/Hvass-Labs/TensorFlow-Tutorials">https://github.com/Hvass-Labs/TensorFlow-Tutorials</a></li>
 </ul>
 
 

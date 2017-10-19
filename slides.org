@@ -40,7 +40,7 @@ Ensure that you have the following installed:
 2. Python 3: https://www.python.org/downloads/
 3. Jupyter (recommended): http://jupyter.org/
 
-Materials are available here: insert link
+Materials are available [[https://github.com/raynoldng/hackerschool-tensorflow][here]]
 * Machine Learning Primer
   :PROPERTIES:
   :SLIDE:    segue dark quote
@@ -51,7 +51,7 @@ Materials are available here: insert link
 ** Structure in data
 - some interpretations to "structure in data"
   - given some data, one can predict other data points with some confidence
-  - one can compress the data, i.e., store the smae amount of information, with
+  - one can compress the data, i.e., store the same amount of information, with
     less space
 
 \begin{align*}
@@ -63,23 +63,14 @@ B = \{1, 2, 1, 2, 1, 2, 1\}
 
 *** Entropy
 - quantified as Entropy of Process
-$$H(X) = -\sum_{i=1}^{N} p(x_i) \log_2 p(x_i)$$
+$$H(X) = -\sum_{i=1}^{N} p(x_i) \log p(x_i)$$
 - If entropy increases, uncertainty in prediction increases
 *** Entropy (examples)
 - Example: fair dice
-$$H(\text{fair dice roll}) = -\sum_{i=1}^6 \frac{1}{6} \log_2 \frac{1}{6}=2.58$$
+$$H(\text{fair dice roll}) = -\sum_{i=1}^6 \frac{1}{6} \log \frac{1}{6}=2.58$$
 - Example: biased 20:80 coin
-$$H(20/80 \text{ coin toss}) = -\frac{1}{5}\log_2 \frac{1}{5}-\frac{4}{5}\log_2 \frac{4}{5} = 0.72$$
+$$H(20/80 \text{ coin toss}) = -\frac{1}{5}\log \frac{1}{5}-\frac{4}{5}\log \frac{4}{5} = 0.72$$
 - biased coin toss has lower entropy; predicting its outcome is easier than a fair dice
-*** Information in features
-    
-- to make predicts, signals need to be information rich
-- [insert image on clusters here]
-*** Dimensionality Reduction
-- signals used to make predictions can contain redundant information
-- true dimensionality of a problem is often much smaller than number of
-  available features
-- common method for dimensionality reduction: PCA
 ** Basic Concepts for TensorFlow
 Recall from linear algebra that:
 - Scalar: an array in 0-D
@@ -104,7 +95,7 @@ Can represent linear regression as a graph
 - graph shows how data is transformed by nodes and what is passed between them
 ** Graph Representation of ML Models (1)
 Consider a slightly larger neural net graph:
-#+ATTR_HTML: :width 60%
+#+ATTR_HTML: :width 50%
 [[file:images/neural_net.png]]
 
 For more complex models, it could be helpful to visualize your graph.
@@ -121,12 +112,16 @@ $$g(u) = max(0, u)$$
 
 ** Model Output
 - output depends on activation function used, but is generally any real number $[-\infty, \infty]$
-- For categorical classification, e.g. binary classification, an additional
-  sigmoid function can be applied to bring the output to range of $[0,1]$
+- For binary classification, an additional sigmoid function can be applied to
+  bring the output to range of $[0,1]$
 $$S(x) = \frac{1}{1+e^{-x}}$$
-[insert image]
+
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 90%
+[[file:images/sigmoid.png]]
+#+END_CENTER
 ** Softmax Function
-- for multi-class prediction (e.g. image classification) a softmax function is used:
+- for multi-class prediction a softmax function is used:
 $$S_j(\boldsymbol{z}) = \frac{e^{z_j}}{\sum_{k=1}^K e^{z_k}} \text{ for }j=1,\dots,k$$
 - squash $K$ dimensional vector *z* to a $K$ dimensional vector that sum to 1
 $$\sum_{j=1}^k S_j(\boldsymbol{z}) = 1$$
@@ -137,6 +132,11 @@ $$\sum_{j=1}^k S_j(\boldsymbol{z}) = 1$$
   :ASIDE:    right bottom
   :ARTICLE:  flexbox vleft auto-fadein
   :END:
+** What is TensorFlow?
+- It is Google's AI Engine
+- "TensorFlow is an interface for expressing machine learning algorithms, and an implementation for executing such algorithms"
+- Originally developed Google Brain Team to conduct machine learning research and deep neural networks research
+- General enough to be applicable to a wide variety of other domains
 ** Data Flow Graphs
 Tensorflow separates definition of computations from their execution
 
@@ -151,7 +151,7 @@ a = tf.add(3,5)
 
 ** Visualizing with TensorBoard
 
-- `tf.summary.FileWriter` serializes the graph into a format the TensorBoard can read
+- =tf.summary.FileWriter= serializes the graph into a format the TensorBoard can read
 
 #+BEGIN_SRC python
 tf.summary.FileWriter("logs", tf.get_default_graph()).close()
@@ -165,12 +165,12 @@ tensorboard --logdir=logs
 
 - This will launch an instance of TensorBoard that you can access at http://localhost:6006
 
-** How to get value of `a`?
+** How to get value of =a=?
 #+BEGIN_SRC python
 print(a)
 #+END_SRC
 
-Create a `session`, and within it, evaluate the graph
+Create a =session=, and within it, evaluate the graph
 
 #+BEGIN_SRC python
 sess = tf.Session()
@@ -392,9 +392,9 @@ One hot encoding
 - the ith element is 1, rest are 0. E.g. Digit 1: $[0,1,\dots]$
 *** MNIST Data
 The MNIST data is split into three parts:
-1. 55,000 data points of training data (`mnist.train`)
-2. 10,000 data points of test data (`mnist.test`)
-3. 5,000 data points of validation data (`mnist.validation`)
+1. 55,000 data points of training data (=mnist.train=)
+2. 10,000 data points of test data (=mnist.test=)
+3. 5,000 data points of validation data (=mnist.validation=)
 
 Every MNIST data has 2 parts:
 1. an image of a handwritten digit (call it "x")
@@ -406,10 +406,8 @@ Every MNIST data has 2 parts:
   :ARTICLE:  flexbox vleft auto-fadein
   :END:
 *** Overview
-#+BEGIN_CENTER
-#+ATTR_HTML: :width 140%
+#+ATTR_HTML: :width 80%
 [[file:images/softmax_1.png]]
-#+END_CENTER
 *** Overview (1)
 #+BEGIN_CENTER
 #+ATTR_HTML: :width 120%
@@ -473,7 +471,7 @@ feasible than training on the entire data set
 *** Evaluating Our Model
 
 - =tf.argmax= is an extrememly helpful function that returns the index of the highest entry in a tensor along some axis.
-- =tf.argmax(y,1)= is predicted label while `tf.argmax(y_, 1)` is the actual label
+- =tf.argmax(y,1)= is predicted label while =tf.argmax(y_, 1)= is the actual label
 - =tf.equal= to check if prediction matches the true
 
 #+BEGIN_SRC python
@@ -512,7 +510,7 @@ Approx 91% is very bad, 6 digit ZIP code would have an accuracy rate of 57%
 #+END_CENTER
 *** Convolution
 #+BEGIN_CENTER
-#+ATTR_HTML: :width 100%
+#+ATTR_HTML: :width 80%
 [[file:images/convolution.png]]
 #+END_CENTER
 *** Convolution (1)
@@ -522,7 +520,7 @@ Approx 91% is very bad, 6 digit ZIP code would have an accuracy rate of 57%
 #+END_CENTER
 *** Convolution (2)
 #+BEGIN_CENTER
-#+ATTR_HTML: :width 100%
+#+ATTR_HTML: :width 95%
 [[file:images/convolution_3.png]]
 #+END_CENTER
 *** Pooling
@@ -535,9 +533,9 @@ Approx 91% is very bad, 6 digit ZIP code would have an accuracy rate of 57%
 #+ATTR_HTML: :width 80%
 [[file:images/pooling_2.png]]
 #+END_CENTER
-*** Fully Connected Layers (edit image)
+*** Fully Connected Layers
 #+BEGIN_CENTER
-#+ATTR_HTML: :width 90%
+#+ATTR_HTML: :width 100%
 [[file:images/layers.png]]
 #+END_CENTER
 *** Hyper Parameters
@@ -666,11 +664,17 @@ with tf.Session() as sess:
   print("Accuracy:", accuracy.eval({x: mnist.test.images, y_: mnist.test.labels}))
 #+END_SRC
 ** Toy Program
-[insert link to github repo here]
-
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 80%
+[[file:images/toy_program.png]]
+#+END_CENTER
 * References
 
 - [[https://github.com/PythonWorkshop/intro-to-tensorflow/blob/master/MathPrimer/Math%20primer%20for%20ML%20%26%20TensorFlow%20workshop.ipynb][Machine Learning Primer]]
+- http://brohrer.github.io/how_convolutional_neural_networks_work.html
+- https://www.tensorflow.org/get_started/mnist/beginners
+- https://www.tensorflow.org/get_started/mnist/pros
+- https://github.com/Hvass-Labs/TensorFlow-Tutorials
 
 * Thank You
 :PROPERTIES:
