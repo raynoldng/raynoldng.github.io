@@ -667,6 +667,11 @@ with tf.Session() as sess:
 #+END_SRC
 ** Toy Program
 [insert link to github repo here]
+
+* References
+
+- [[https://github.com/PythonWorkshop/intro-to-tensorflow/blob/master/MathPrimer/Math%20primer%20for%20ML%20%26%20TensorFlow%20workshop.ipynb][Machine Learning Primer]]
+
 * Thank You
 :PROPERTIES:
 :SLIDE: thank-you-slide segue
