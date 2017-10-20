@@ -101,8 +101,7 @@ Consider a slightly larger neural net graph:
 For more complex models, it could be helpful to visualize your graph.
 [[https://www.tensorflow.org/versions/r0.7/how_tos/graph_viz/index.html][TensorBoard]] provides this virtualization tool
 ** Activation Functions
-- If $g(u)$ is linear, then we return to linear regression
-- In practice, $g(\dots)$ is non-linear, and a popular function is the rectified linear unit (*ReLU*):
+- A popular function is the rectified linear unit (*ReLU*):
 $$g(u) = max(0, u)$$
 
 #+BEGIN_CENTER
@@ -187,7 +186,7 @@ with tf.Session() as sess:
 
 ** Practice with More Graphs
 
-Try to generate the following graph:
+Try to generate the following graph: (insert equation)
 
 #+BEGIN_CENTER
 #+ATTR_HTML: :width 70%
@@ -285,7 +284,7 @@ $$L = \sum (y - \hat{y})^2$$
 Supose we want to model the following "unknown" function:
 
 $$y = x + 20 \sin(x/10)$$
-*** Plot Input Data
+*** Plot Input Data                                                :noexport:
 Make sure that =seaborn= and =matplotlib= are installed. If you are using Jupyter, add =%matplotlib inline= in the code cell.
 
 #+BEGIN_SRC python
@@ -487,17 +486,17 @@ Approx 91% is very bad, 6 digit ZIP code would have an accuracy rate of 57%
   :ASIDE:    right bottom
   :ARTICLE:  flexbox vleft auto-fadein
   :END:
+*** Flowchart
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 100%
+[[file:images/cnn_network_flowchart.png]]
+#+END_CENTER
 *** Introduction
 - Convolutional Networks work by moving smaller filter across the input image
 - Filters are re-used for recognizing patters throughout the entire input image
 - This makes Convolutional Networks much more powerfule than Fully-Connected
   networks with the same number of variables
 - Convolutional Networks are also faster to train
-*** Flowchart
-#+BEGIN_CENTER
-#+ATTR_HTML: :width 100%
-[[file:images/cnn_network_flowchart.png]]
-#+END_CENTER
 *** Features
 #+BEGIN_CENTER
 #+ATTR_HTML: :width 100%
@@ -669,7 +668,6 @@ with tf.Session() as sess:
 [[file:images/toy_program.png]]
 #+END_CENTER
 * References
-
 - [[https://github.com/PythonWorkshop/intro-to-tensorflow/blob/master/MathPrimer/Math%20primer%20for%20ML%20%26%20TensorFlow%20workshop.ipynb][Machine Learning Primer]]
 - http://brohrer.github.io/how_convolutional_neural_networks_work.html
 - https://www.tensorflow.org/get_started/mnist/beginners

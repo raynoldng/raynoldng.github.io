@@ -19,7 +19,7 @@ var SLIDE_CONFIG = {
      name: 'Raynold Ng', 
      company: '', 
      gplus: '', 
-     twitter: '@nushackers', 
+     twitter: '@nu', 
      www: 'http://www.nushackers.org/', 
      github: '', 
    }]
