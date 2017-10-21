@@ -33,6 +33,14 @@
 - MNIST Example
   - Softmax
   - Convoluted Neural Networks
+* NUS Hackers
+
+- student-run organization committed to the spread of hacker culture & free/open-source software
+- Events:
+  - [[https://www.nushackers.org/fridayhacks/][Friday Hacks]]
+  - [[http://school.nushackers.org/][hackerschool]]
+  - [[https://www.facebook.com/groups/nushackers/permalink/1186836361416932/][Project Intern]]
+
 * Installation and Setup
 
 Ensure that you have the following installed:
@@ -51,6 +59,12 @@ Materials are available [[https://github.com/raynoldng/hackerschool-tensorflow][
 - "The science of getting computers to act *without being explicitly programmed*" - Andrew Ng
 - Primary aim is to allow computers to learn automatically without human
   intervention or assistance and adjust actions accordingly
+
+
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 40%
+[[file:images/machine_learning.png]]
+#+END_CENTER
 ** Using TensorFlow to sort cucumbers
 - [[https://cloud.google.com/blog/big-data/2016/08/how-a-japanese-cucumber-farmer-is-using-deep-learning-and-tensorflow][Makoto Koike]] used deeping learning and TensorFlow to sort cucumbers by size, shape, color and other attributes
 
@@ -101,7 +115,6 @@ $$w_o + w_1 x = \hat{y}$$
 ** Graph Representation of ML Models
 
 Can represent linear regression as a graph
-
 #+ATTR_HTML: :width 40%
 [[file:images/linear_reg_graph.png]]
 
@@ -124,6 +137,13 @@ $$g(u) = max(0, u)$$
 [[file:images/relu.png]]
 #+END_CENTER
 
+** Gradient Descent
+
+- a way to minimize objective function
+- one takes steps proportional to the negative of the gradient of the function at the current point.
+
+#+ATTR_HTML: :width 50%
+[[file:images/gradient_descent.png]]
 ** Model Output
 - output depends on activation function used, but is generally any real number $[-\infty, \infty]$
 - For binary classification, an additional sigmoid function can be applied to
@@ -200,7 +220,7 @@ tensorboard --logdir=logs
 
 ** Practice with More Graphs
 
-Try to generate the following graph: $(x+y)^{xy}$
+Try to generate the following graph: $(x+y)^{xy}$ where $x=2,y=3$
 
 #+BEGIN_CENTER
 #+ATTR_HTML: :width 70%
@@ -314,6 +334,15 @@ with tf.Session() as sess:
   :ASIDE:    right bottom
   :ARTICLE:  flexbox vleft auto-fadein
   :END:
+*** Imports
+#+BEGIN_SRC python
+  import tensorflow as tf
+  import numpy as np
+  import seaborn
+  import matplotlib.pyplot as plt
+  # %matplotlib inline
+
+#+END_SRC
 *** Recap
 - we have two weights $w_0$ and $w_1$, we want the model to figure out good weights by minimizing prediction error
 - define the following *loss function*
@@ -402,7 +431,7 @@ $$J(W,b) = \frac{1}{N}\sum_{i=1}^{N}(y_i-(W_{x_i}+b))^2$$
 #+END_CENTER
 
 * MNIST and TensorFlow
-  :PROPERTIES:
+  :PROPeRTIES:
   :SLIDE:    segue dark quote
   :ASIDE:    right bottom
   :ARTICLE:  flexbox vleft auto-fadein
