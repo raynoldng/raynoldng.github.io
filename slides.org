@@ -216,6 +216,11 @@ tf.summary.FileWriter("logs", tf.get_default_graph()).close()
 tensorboard --logdir=logs
 #+END_SRC
 
+Or in Jupyter:
+#+BEGIN_SRC python
+!tensorboard --logdir=logs
+#+END_SRC
+
 - This will launch an instance of TensorBoard that you can access at http://localhost:6006
 
 ** Practice with More Graphs
