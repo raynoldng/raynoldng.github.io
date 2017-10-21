@@ -320,7 +320,7 @@ with tf.Session() as sess:
 
 $$L = \sum (y - \hat{y})^2$$
 
-Supose we want to model the following "unknown" function:
+Given the following function, fit a linear model
 
 $$y = x + 20 \sin(x/10)$$
 *** Plot Input Data                                                :noexport:
