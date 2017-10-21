@@ -203,7 +203,9 @@ with tf.Session() as sess:
 #+END_SRC
 
 ** Visualizing with TensorBoard
-
+:PROPERTIES:
+:ARTICLE:  smaller
+:END:
 - =tf.summary.FileWriter= serializes the graph into a format the TensorBoard can read
 
 #+BEGIN_SRC python
